@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600&display=swap" rel="stylesheet">
+<style>
+#demo{
+background-color:#008CBA;
+color: white;
+padding:15px;
+border-radius: 20px;
+border: 1.8px solid black;
+font-size:18px;
+
+}
+.container{
+border: 2px solid #008CBA;
+padding: 20px;
+margin-right: 240px;
+border-radius:25px;
+font-family: 'Teko',sans-serif;
+background-color:	steelblue;
+
+}
+.container:hover{
+background-color: cadetblue;
+border: none;
+color: white;
+font-family: 'Teko', sans-serif;
+border-radius: 30px;
+}
+#btn1,h1{
+padding: 12px 30px ;
+
+border: none;
+background-color: #008CBA;
+font-size: 22px;
+color: white;
+border-radius: 4px;
+cursor: pointer;
+font-family: 'Teko', sans-serif;
+border: 2px solid black;
+
+}
+#btn1:hover{
+background-color: white;
+color: Tomato;
+border: 2px solid #008CBA;
+}
+#demo:hover{
+background-color:#ADD8E6;
+color: #008CBA;
+border: 2px solid #008CBA;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1 >Date and Time Teller!!!</h1>
+<button id="btn1" onclick="func()" style="width:370px">Get Date and Time</button>
+
+<p id="demo">Date and Time is Shown Here</p>
+
+<script>
+var d = new Date();
+function func(){
+document.getElementById("demo").innerHTML = d.toUTCString();}
+</script>
+</div>
+</body>
+</html>
