@@ -3,7 +3,7 @@
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600&display=swap" rel="stylesheet">
 <style>
-#demo{
+#demo,#demo1,#demo2{
 background-color:#008CBA;
 color: white;
 padding:15px;
@@ -51,6 +51,16 @@ background-color:#ADD8E6;
 color: #008CBA;
 border: 2px solid #008CBA;
 }
+#demo1:hover{
+background-color:#ADD8E6;
+color: #008CBA;
+border: 2px solid #008CBA;
+}
+#demo2:hover{
+background-color:#ADD8E6;
+color: #008CBA;
+border: 2px solid #008CBA;
+}
 </style>
 </head>
 <body>
@@ -58,12 +68,19 @@ border: 2px solid #008CBA;
 <h1 >Date and Time Teller!!!</h1>
 <button id="btn1" onclick="func()" style="width:370px">Get Date and Time</button>
 
-<p id="demo">Date and Time is Shown Here</p>
+<p id="demo">DAY</p>
+<p id="demo1">DATE</p>
+<p id="demo2">TIME</p>
 
 <script>
 var d = new Date();
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var Month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 function func(){
-document.getElementById("demo").innerHTML = d.toUTCString();}
+document.getElementById("demo").innerHTML ="DAY | " +days[d.getDay()] ;
+document.getElementById("demo1").innerHTML = "DATE | " +d.getDate() +" "+ Month[d.getMonth()] +" " + d.getFullYear();
+document.getElementById("demo2").innerHTML= "TIME | "+d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds();
+}
 </script>
 </div>
 </body>
